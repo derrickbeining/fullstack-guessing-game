@@ -6,9 +6,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <title>Guessing Game</title>
-        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Athiti:400,600|Monoton" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div id="app">
@@ -16,15 +16,15 @@
             <div id="header">
                 <div class="container header-container">
                     <h1 class="text-center">Guess the Number</h1>
-                    <h2 class="text-center">Pick a Number Between <br><span>1</span> and <span>100</span></h2>
+                    <h2 class="text-center">Pick a Number Between <br><span>1</span> and <span class="max-value">100</span></h2>
                 </div>
             </div>
 
             <div id="main">
-                <form id="input-parent">
+                <form id="input-parent" >
                     <div class="form-group guess-input-container">
                         <label for="guess-input" />
-                        <input type="text" inputmode="numeric" title="Enter a number" maxlength="4" id="guess-input" class="guess-input" placeholder="#" autocomplete="off">
+                        <input type="text" inputmode="numeric" title="Enter a number" maxlength="4" id="guess-input" class="guess-input" pattern="[0-9]{1,4}" placeholder="#" autocomplete="off">
                         <button type="submit" class="custom-submit-btn">Go!</button>
                     </div>
                 </form>
@@ -77,10 +77,10 @@
                 <h4 class="text-center">Coded by <span class="my-name">Derrick Beining</span> for</h4>
                 <div class="row">
                     <div class="col-xs-6" style="margin-top: -20px;">
-                        <img class="img-responsive logo-md center-block" src="/images/fa-logo@2x.png" alt="Fullstack Academy logo">
+                        <img class="img-responsive logo-md center-block" src="images/fa-logo@2x.png" alt="Fullstack Academy logo">
                     </div>
                     <div class="col-xs-6">
-                        <img class="img-responsive logo-md center-block" src="/images/grace_hopper_academy.png" alt="Grace Hopper logo">
+                        <img class="img-responsive logo-md center-block" src="images/grace_hopper_academy.png" alt="Grace Hopper logo">
                     </div>
                 </div>
             </div>
