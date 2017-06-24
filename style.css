@@ -219,6 +219,19 @@ img {
     border-color: #d60000  #ff2828 #ff7575;
 }
 
+.guess-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgray;
+}
+guess-input::-moz-placeholder { /* Firefox 19+ */
+  color: lightgray;
+}
+guess-input:-ms-input-placeholder { /* IE 10+ */
+  color: lightgray;
+}
+guess-input:-moz-placeholder { /* Firefox 18- */
+  color: lightgray;
+}
+
 .guess-input::placeholder {
     color: lightgray;
 }
