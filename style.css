@@ -134,7 +134,7 @@ img {
 /*    bottom: 0; */
     position: relative;
     width: 100%;
-/*    border-bottom: 1000px solid transparent;*/
+    border-bottom: 100px solid transparent;
     border-top: 50px solid white;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
