@@ -150,6 +150,21 @@ img {
     z-index: -1;
 }
 
+.ampersand {
+    color: white;
+    font-weight: 600;
+    font-size: 4rem;
+    height: 100%;
+    display: block;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.footer-ampersand {
+    display: block;
+    
+}
+
 /*
 .footer:after {
     content: "";
@@ -222,7 +237,8 @@ img {
 }
 
 .logo-md {
-    max-width: 300px;
+    width: 100%;
+    max-width: 300px
 }
 
 .menu-btns-container {
