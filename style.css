@@ -131,13 +131,22 @@ img {
 .footer {
     background-color: lightblue;
 /*    border-radius: 50px 0px;*/
-    bottom: 0; 
+/*    bottom: 0; */
     position: relative;
     width: 100%;
-    border-bottom: 100px solid transparent;
+/*    border-bottom: 1000px solid transparent;*/
     border-top: 50px solid white;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
+    
+}
+
+.footer-container {
+    bottom: 0;
+    max-height: 300px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
     z-index: -1;
 }
 
@@ -222,6 +231,7 @@ img {
 }
 
 .my-name {
+    color: white;
     font-weight: 100;
     text-decoration-line: underline;
 }
@@ -242,4 +252,8 @@ img {
 .past-guesses-container {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.spacer {
+    height: 20%;
 }
