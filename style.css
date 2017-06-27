@@ -1,5 +1,7 @@
 
 body {
+    background-color: lightblue;
+    border-top: solid white;
     font-family: 'Athiti', sans-serif;
     height: 100%;
     line-height: 1.333;
@@ -30,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     color: #0171a1;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -79,9 +81,11 @@ img {
 
 .custom-button {
     background-color: #0171a1;
+    box-sizing: border-box;
     color: white;
     float: left;
     font-size: 1.5rem;
+    font-weight: 600;
     margin: 0 5px;
     padding: 20px;
     text-align: center;
@@ -91,6 +95,7 @@ img {
 }
 
 .custom-button:hover {
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3) ;
     filter: brightness(1.1);
 }
 
@@ -106,7 +111,7 @@ img {
     bottom: 0;
     color: white;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     height: 75px;
     position: absolute;
     right: 0;
@@ -141,16 +146,7 @@ img {
     
 }
 
-.footer-container {
-    bottom: 0;
-    max-height: 300px;
-    overflow: visible;
-    position: relative;
-    width: 100%;
-    z-index: -1;
-}
-
-.ampersand {
+.footer-ampersand {
     color: white;
     font-weight: 600;
     font-size: 4rem;
@@ -160,10 +156,19 @@ img {
     text-align: center;
 }
 
-.footer-ampersand {
-    display: block;
-    
+.footer-container {
+    bottom: 0;
+    max-height: 300px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    z-index: -1;
 }
+
+.footer-heading {
+    margin: 30px auto;
+}
+
 
 /*
 .footer:after {
@@ -249,6 +254,10 @@ guess-input:-moz-placeholder { /* Firefox 18- */
     position: relative;
 }
 
+.interface {
+    background-color: white;
+}
+
 .logo-md {
     width: 100%;
     max-width: 300px
@@ -284,5 +293,6 @@ guess-input:-moz-placeholder { /* Firefox 18- */
 }
 
 .spacer {
-    height: 20%;
+    background-color: white;
+    height: 10%;
 }
