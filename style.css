@@ -150,7 +150,7 @@ ul {
     margin-bottom: 25px;}
 
 .footer {
-    background-color: lightblue;
+    background-color: transparent;
 /*    border-radius: 50px 0px;*/
 /*    bottom: 0; */
     position: relative;
@@ -310,11 +310,15 @@ guess-input:-moz-placeholder { /* Firefox 18- */
 
 .past-guess {
     border-bottom: 5px dotted grey;
-    color: indianred;
+    color: #0171a1;
     font-family: Monoton, cursive;
     font-size: 1.2rem;
     padding: 0px;
     text-align: center;
+}
+
+.past-guess.red {
+    color: indianred;
 }
 
 .past-guesses {

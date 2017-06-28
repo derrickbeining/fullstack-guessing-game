@@ -170,6 +170,7 @@ function start() {
     function resetPastGuessesDisplay() {
         ['N', 'O', 'P', 'E', '!'].forEach(function(el, i) {
             pastGuessHolders[i].textContent = el;
+            pastGuessHolders[i].classList.remove('red');
         });
     }
     
@@ -246,6 +247,7 @@ function start() {
     
     function addToPastGuessDisplay() {
         var i = gameState.pastGuesses.length - 1;
+        pastGuessHolders[i].classList.add('red');
         pastGuessHolders[i].textContent = gameState.pastGuesses[i];
     }
     
