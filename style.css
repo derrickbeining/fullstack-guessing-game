@@ -3,8 +3,9 @@ body {
     background-color: lightblue;
     border-top: solid white;
     font-family: 'Athiti', sans-serif;
-    height: 100%;
+/*    height: 100%;*/
     line-height: 1.333;
+    position: relative;
     -webkit-font-smoothing: antialiased;
     moz-osx-font-smoothing: grayscale;
     font-smoothing: always;
@@ -37,7 +38,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 h3 {
@@ -56,17 +57,18 @@ h6 {
     font-size: 1.1rem;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 ul {
   list-style: none;
   padding: 0;
 }
 
-img {
-
-}
-
 .custom-background {
-    animation: ;
     color: lightgray;
     font-family: sans-serif;
     height: 100%;
@@ -79,32 +81,42 @@ img {
     
 }
 
-.custom-button {
+.button-custom {
     background-color: #0171a1;
-    box-sizing: border-box;
     color: white;
-    float: left;
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0 5px;
+    margin: 0 auto;
+    max-width: 200px;
     padding: 20px;
     text-align: center;
     -webkit-transition: transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
     transition:         transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
-    width: 46%;
+    
 }
 
-.custom-button:hover {
+.button-custom:hover {
     box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3) ;
     filter: brightness(1.1);
 }
 
-.custom-button:active {
+.button-custom:active {
     filter: brightness(.9);
     transform: perspective(1px) translate3d(0,0,0) scale(0.98);
 }
 
-.custom-submit-btn {
+.buttons-custom-container {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.buttons-two {
+    float: left;
+    margin: auto 2.5%;
+    width: 45%;
+}
+
+.button-submit {
     background-color: #00c691;
     border: 2px outset #00c691;
     border-radius: 50%;
@@ -120,18 +132,22 @@ img {
     transition:         transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.custom-submit-btn:hover {
+.button-submit:hover {
     transform: rotate(360deg) scale(1.05);
 }
 
-.custom-submit-btn:focus {
+.button-submit:focus {
     outline: none;
     
 }
 
-.custom-submit-btn:active {
+.button-submit:active {
     background-color: #00b282;
 }
+
+.feedback-text {
+    font-size: 1.5rem;
+    margin-bottom: 25px;}
 
 .footer {
     background-color: lightblue;
@@ -263,10 +279,22 @@ guess-input:-moz-placeholder { /* Firefox 18- */
     max-width: 300px
 }
 
-.menu-btns-container {
-    margin: 0 auto;
+.modal-feedback, .modal-start-game, .modal-restart-game {
+    background-color: white;
+    border: 1px solid gray;
+    left: calc(50% - 150px);
+    opacity: 0;
+    padding: 25px;
+    pointer-events: none;
+    position: fixed;
+    top: calc(50% - 150px);
+    -webkit-transition: opacity 500ms ease;
+    transition:         opacity 500ms ease;
     width: 300px;
+    z-index: -1;
 }
+
+
 
 .my-name {
     color: white;
@@ -274,12 +302,18 @@ guess-input:-moz-placeholder { /* Firefox 18- */
     text-decoration-line: underline;
 }
 
+.page-wrapper {
+    height: 100%;
+    -webkit-transition: filter 500ms ease;
+    transition:         filter 500ms ease;
+}
+
 .past-guess {
     border-bottom: 5px dotted grey;
-    color: lightgray;
+    color: indianred;
     font-family: Monoton, cursive;
-    font-size: 1.5rem;
-    padding: 5px;
+    font-size: 1.2rem;
+    padding: 0px;
     text-align: center;
 }
 
@@ -292,7 +326,50 @@ guess-input:-moz-placeholder { /* Firefox 18- */
     padding-bottom: 20px;
 }
 
+.range-choice-container {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.range-choice {
+    border: none;
+    border-bottom: 3px dotted gray;
+    text-align: center;
+    width: 33%;
+}
+
+.range-choice:focus {
+    outline: none;
+    
+}
+
 .spacer {
     background-color: white;
-    height: 10%;
+    padding: 10%;
+}
+
+.start-dialog-error {
+    color: indianred;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+
+.start-dialog .modal-start-game, 
+.feedback-dialog .modal-feedback {
+    box-shadow: -10px 10px 50px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.start-dialog .page-wrapper,
+.feedback-dialog .page-wrapper {
+    filter: blur(5px);
+    pointer-events: none;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
