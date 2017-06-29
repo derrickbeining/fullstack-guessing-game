@@ -11,9 +11,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="game.js" async></script>
     </head>
-    
     <body class="start-dialog">
-        
         <div class="modal-start-game">
             <p><strong>"Guess the Number"</strong> is the name of the game. Select the range of numbers from which you'd like to guess, then hit "Play!" You'll get five chances to guess the random number.</p>
             <p>The random number will be between</p>
@@ -21,7 +19,6 @@
             <div class="start-dialog-error hide">Error: The second number must be at least 5 greater than the first.</div>
             <div id="playButton" class="button-custom button-play">Play!</div>
         </div>
-        
         <div class="modal-feedback">
             <div id="feedbackText" class="feedback-text">
                 <p>Uh, it's a number? Sorry, can't really give you a hint on the first guess.</p>
@@ -38,16 +35,12 @@
                             <h2 class="text-center">Between <span id="minValueDisplay">1</span> and <span id="maxValueDisplay">100</span></h2>
                         </div>
                     </header>
-
                     <div id="main">
-                        
                             <div class="form-group guess-input-container">
                                 <label for="guessInput" />
                                 <input type="text" inputmode="numeric" title="Enter a number" maxlength="4" id="guessInput" class="guess-input" pattern="[0-9]{1,4}" placeholder="#" autocomplete="off">
                                 <button id="submitButton" class="button-submit hide">Go!</button>
                             </div>
-                        
-
                         <div id="guesses" class="container past-guesses-container">
                             <ul class="past-guesses row">
                                 <div class="col-xs-2 col-xs-offset-1">
@@ -92,8 +85,6 @@
                 </div>
                 <div class="spacer"></div>
             </main>
-
-
             <div id="footer" class="footer-container">
                 <div class="container footer">
                     <h4 class="footer-heading text-center">Coded by <span class="my-name">Derrick Beining</span> for</h4>
@@ -104,7 +95,6 @@
                         <div class="col-sm-2">
                             <span class="footer-ampersand">&</span>
                         </div>
-
                         <div class="col-sm-5 col-md-4 col-lg-3">
                             <img class="img-responsive logo-md center-block" src="images/grace_hopper_academy.png" alt="Grace Hopper logo">
                         </div>
